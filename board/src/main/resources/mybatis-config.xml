@@ -4,6 +4,7 @@
 	
 	<typeAliases>
 		<typeAlias type="com.board.vo.BoardVO" alias="BoardVO"/>
+<!-- 		<typeAlias type="com.board.vue.vo.VueVO" alias="VueVO"/> -->
 	</typeAliases>
 	
 </configuration>

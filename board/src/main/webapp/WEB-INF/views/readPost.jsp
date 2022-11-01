@@ -34,7 +34,7 @@
 					<td>${ post.readCnt + 1 }</td>
 				</tr>
 				<tr>
-					<td colspan="6">${ post.content }</td>
+					<td colspan="6"><pre>${ post.content }</pre></td>
 				</tr>
 			</tbody>
 			<tfoot>
@@ -71,14 +71,9 @@
 	
 	function deletePost(){
 		var bbsId = $("#bbsId").text();
-		url = "deletePost?bbsId=" + bbsId;
-		
 		$.ajax({
-			url : url,
+			url : "deletePost?bbsId=" + bbsId,
 			method : "GET",
-			error : function(error, status, msg){
-				alert("데이터 전송 실패");
-			},
 			success : function(result){
 				if(result = 1){
 					alert("삭제 성공");
@@ -86,6 +81,9 @@
 				} else{
 					alert("삭제 실패");
 				}
+			},
+			error : function(error, status, msg){
+				alert("데이터 전송 실패");
 			}
 		})
 	}

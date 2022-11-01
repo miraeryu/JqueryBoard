@@ -116,6 +116,13 @@ li {
 	</div>
 </body>
 <script>
+$("document").ready(function(){
+	var category = $("#hiddenCategory").val();
+	if(category){
+		$("#category").val(category).prop("selected", true);
+	}
+})
+
 	function read(id){
 		var category = $("#hiddenCategory").val();
 		var keyword = $("#keyword").val();

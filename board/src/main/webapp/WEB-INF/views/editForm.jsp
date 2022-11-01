@@ -35,7 +35,7 @@
 					<tr>
 						<td colspan="2">
 							<button type="button" onclick="editConfirm()">확인</button>
-							<button type="button" onclick="listConfirm()">취소</button>			
+							<button type="button" onclick="listConfirm()">취소</button>
 						</td>
 					</tr>
 				</tfoot>

@@ -29,6 +29,7 @@ public class BoardController {
 	// 전체보기 및 메인화면
 	@RequestMapping("/")
 	public String list(@ModelAttribute BoardVO vo, Model model) {
+		System.out.println(vo.getKeyword());
 		vo.setAllPostCnt(boardService.rowCnt(vo));		// 전체 행 개수 세팅
 		if (vo.getNowPage() == 0) {						// 처음 로딩할 경우
 			vo.setNowPage(1);
